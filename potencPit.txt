@@ -1,0 +1,231 @@
+POTENCIJALNA PITANJA:
+
+PITANJE 
+- Što je normalizacija? Normalizacija baze podataka je razdoblje kojim se iz danog modela bez podataka 
+nastoji otkloniti potreba za višestrukim ponavljanjem različitih podataka. Načelni cilj normalizacije možemo 
+izraziti riječima: Baza podataka treba biti oblikovana tako da se svaki podatak upisuje samo jednom (ili samo na jednom mjestu).
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+- Koje su prednosti normalizacije? Prednosti normalizacije su:
+1. Smanjenje redundancije podataka
+2. Povećanje integriteta podataka
+3. Povećanje efikasnosti upita
+4. Povećanje efikasnosti ažuriranja
+5. Povećanje efikasnosti dodavanja novih podataka
+6. Povećanje efikasnosti brisanja podataka
+7. Povećanje efikasnosti promjene strukture baze podataka
+8. Povećanje efikasnosti pristupa podacima
+9. Povećanje efikasnosti upravljanja podacima
+10. Povećanje efikasnosti održavanja baze podataka
+11. Povećanje efikasnosti razvoja baze podataka
+12. Povećanje efikasnosti pristupa podacima
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+ZADATAK:
+- imamo virtualnu mašinu, instaliraj apache, php i mysql server
+- na virtualki je instaliran ubuntu
+
+sudo apt update (ćak i netreba)
+sudo apt install apache2
+sudo apt install mysql-server
+sudo apt install php libapache2-mod-php
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+ZADATAK:
+
+- inicijaliziraj, komitaj, pušni na github
+
+git init
+git add .
+git commit -m "prvi commit"
+git push ( -u, uzeti link sa githuba iz repozitorija)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+PHP - vježba
+
+⚫ Instalirati PHP na instancu Linuxa kreiranog u prvoj vježbi.
+⚫ U konfiguracijskoj datoteci podesite upload_max_filesize na 5M.
+
+- /ect/php/8.1/cli/php.ini
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+INSTALACIJA COMPOSERA NA ubuntu
+sudo apt install composer
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+INSTALACIJA PAKETA 
+sudo composer require brick/math
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Što je Apache?
+• Apache je popularni web server softver, koji se koristi za hostanje web
+stranica i aplikacija. Pokrećemo ga sa ”start httpd”
+• Konfiguracija httpd.conf Apache-a se uobičajeno nalazi u direktoriju
+/etc/apache2/
+• Zadani korijenski (root) web direktorij za Apache web poslužitelj na Linuxu je
+/var/www/html
+• Direktiva koja se koristi u datoteci httpd.conf za određivanje korijenskog web
+direktorija je DocumentRoot
+• Direktiva koja se koristi u datoteci httpd.conf za određivanje zadane
+(početne) datoteke za posluživanje je DirectoryIndex
+• Za verzije Apache poslužitelja 2.4 i novije, naredba za provjeru sintakse
+konfiguracijske datoteke je: apachectl configtest
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Što je MySQL?
+
+• MySQL je popularni besplatni relacijski sustav za
+upravljanje bazama podataka (RDBMS) koji se
+koristi za pohranu i upravljanje podacima u
+aplikacijama.
+• Pokrećemo ga sa ”start mysqld”
+
+• Naredba za prikaz svih baza podataka u MySQL-
+u je „SHOW DATABASES”.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Što je PHP?
+
+• PHP (Hypertext Preprocessor) je popularni open-source
+programski jezik koji se koristi za razvoj web aplikacija.
+• PHP se obično izvršava na web poslužiteljima, a kôd PHP-a
+koristi se za generiranje dinamičkih web stranica koje se
+prikazuju u pregledniku.
+• Konfiguracijska datoteka za PHP je "php.ini"
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Što je Composer?
+
+• Composer je alat za upravljanje ovisnostima u
+PHP-u.
+• Omogućuje programerima da lako dodaju i
+uklanjaju pakete (biblioteke, alate i sl.) u svoj
+projekt, zatim automatski riješi ovisnosti između tih
+paketa.
+• Instalacija i konfiguracija:
+1. Preuzmite i instalirajte Composer prema uputama s njegove
+službene stranice (https://getcomposer.org/).
+2. Konfiguracija se vrši uređivanjem "composer.json" datoteke,
+koja se nalazi u korijenskom direktoriju vašeg projekta.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Koja se naredba koristi za stvaranje novog direktorija u
+Linuxu?
+
+mkdir
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Koja je naredba za pokretanje MySQL poslužitelja?
+
+A) start mysqld
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Kako možete instalirati određenu verziju paketa koristeći
+Composer?
+
+D) Pokretanjem naredbe "composer require" s nazivom paketa i
+brojem verzije kao argumentima.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Što trebate učiniti da biste instalirali verziju "1.0.0" paketa
+"vendor/package" pomoću Composer-a?
+
+1. Otvorite naredbeni redak (command prompt) na
+vašem računalu.
+2. Pomaknite se do direktorija u kojem želite instalirati
+paket "vendor/package".
+3.) Izvršite sljedeću naredbu:
+composer require vendor/package:1.0.0
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Koja je najnovija verzija HTML-a?
+
+HTML5
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+RAZLIKA IZMEĐU APSTRAKTNE KLASE I SUĆELJA?
+- apstraktna klasa sadrži definiciju metode, a sućelje samo definira što treba implementirati
+
+----------------------------------------------------------------------------------------------------------------------
+
+RAZLIKA IZMEĐU GET I POST METODE:
+- vidljivost: get vidimo u URL-u, a post ne, post je sakriven u body-u
+- sa get šaljemo podatke putem URL-a (query string parametar), sa post šaljemo podatke putem body-a (tijela zahtjeva)
+
+----------------------------------------------------------------------------------------------------------------------
+
+NAPIŠI KONEKCIJU SA PDO I SA MYSQLI
+
+?????????????????????????????????????????????????
+?????????????????????????????????????????????????
+?????????????????????????????????????????????????
+
+----------------------------------------------------------------------------------------------------------------------
+
+OBJASNITE MYSQL MIGRACIJE (TO NISU LARAVEL MIGRACIJE) :
+
+- omogućuju da drugi dobiju nove tablice ili stupce u bazi, omogućuju verzioniziranje baze (možemo se vratiti unatrag
+sa rollback)
+- kreiraju se pomoću artisana
+
+----------------------------------------------------------------------------------------------------------------------
+
+KAKO MIGRIRATI BAZU NA SERVER?
+
+- u mysql workbenchu napravimo dump baze (strukturu i podatke lokalne baze) (export)
+- dobijem sql file 
+- konektamo se na bazu na udaljenom serveru i preko SSH importamo dobiveni sql file
+
+----------------------------------------------------------------------------------------------------------------------
+
+KAKO BISTE NORMALIZIRALI POSTOJEĆU MYSQL BAZU PODATAKA KOJA SADRŽI REDUNDANTNE
+I NE EFIKASNO STRUKTURIRANE PODATKE?
+UKLJUČITE DETALJNE KORAKE ZA SVAKI DIO PROCESA.
+
+1. Identifikacija problema:
+Pregledajte postojeću bazu podataka kako biste identificirali probleme poput
+redundantnih podataka, nepravilono pohranjenih podataka (npr. više vrijednosti
+u jednom stupcu), ili bilo kakvih znakova koji ušućuju na lošu strukturu baze.
+
+2. Primjena prve normalne forme 1NF
+Osigurajte da tabablica sadrži samo atomske vrijednosti, tj. da svaka čelija
+sadrži samo jednu vrijednost.
+
+.........
+
+----------------------------------------------------------------------------------------------------------------------
+
+require i require_once
+
+require
+Uvijek učitava fajl svaki put kada se funkcija pozove, bez obzira na to je li fajl već prethodno bio učitan.
+Ako fajl ne postoji ili se ne može uključiti, skripta odmah zaustavlja izvršavanje i baca fatalnu grešku.
+
+require_once
+Učitava fajl samo jednom. Ako je fajl već prethodno uključen, preskočiće njegovo ponovno učitavanje.
+Takođe baca fatalnu grešku ako fajl ne postoji.
+
+Oba su slična funkcijama include i include_once, ali ključna razlika je što require i require_once izazivaju 
+fatalnu grešku ako fajl nije pronađen, dok include i include_once izazivaju samo upozorenje (Warning).
+

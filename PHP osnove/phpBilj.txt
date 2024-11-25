@@ -1,0 +1,293 @@
+
+• "==" uspoređuje samo vrijednosti, dok "===" uspoređuje i
+vrijednosti i tipove podataka.
+• INCLUDE generira samo upozorenje ako datoteka nije
+pronađena, dok REQUIRE generira fatalnu pogrešku.
+• Svrha PHP funkcije "spl_autoload_register„ je registrirati
+funkciju koja se automatski poziva kada je klasa nedefinirana.
+• Imenski prostor (namespace) u PHP-u je način izbjegavanja
+sukoba naziva između klasa, funkcija i varijabli.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+PHP VARIJABLE
+
+⚫ varijable su veličine koje tijekom izvršavanja PHP programa mogu mijenjati svoju vrijednost
+⚫ u PHP-u oznake za varijable moraju početi znakom dolara $
+⚫ iza znaka dolara naziv mora početi slovom ili znakom „_”
+⚫ ime varijable ne smije početi brojem, ali ga može sadržavati na bilo kojoj drugoj poziciji u imenu
+⚫ PHP razlikuje velika i mala slova u nazivu varijable
+⚫ ime varijable mora biti definirano u skladu sa značenjem vrijednosti koja se pamti u okviru
+varijable
+⚫ inicijalna vrijednost varijable se dodjeljuje pomoću znaka (=) jednako
+
+• Varijable se koriste za pohranu podataka
+koji se kasnije mogu koristiti tijekom
+izvršavanja programa.
+• Globalne varijable su definirane izvan
+funkcije i mogu se koristiti unutar bilo koje
+funkcije. One su dostupne u cijelom
+programu. Deklariranje globalne varijable
+koristimo $GLOBALS['variable_name'];
+• Static varijable su lokalne varijable, ali
+zadržavaju svoju vrijednost između poziva
+funkcije.
+
+Statička varijabla postoji samo u
+lokalnom dosegu funkcija, ali ne gubi vrijednost
+kada izvršenje programa napusti funkciju.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+KONSTANTE
+
+⚫ konstanta sadrži vrijednost isto kao i varijabla, ali za razliku od varijable, kojoj se vrijednost može
+mijenjati tijekom izvođenja programa, vrijednost konstante se ne mijenja
+⚫ oznake za konstante su bez znaka dolara ispred naziva
+⚫ imena konstanti poželjno je pisati velikim slovima kako bi bile prepoznatljive, ali mogu se pisati i
+malim slovima
+⚫ konstantu u programu možemo pisati kao vrijednost bez ikakve oznake, (na primer 3.14 za
+vrijednost PI)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+TIPOVI podataka
+
+⚫ u PHP-u ne postoje fiksni tipovi podataka
+⚫ ne morate definirati tip varijable prije njenog korištenja
+⚫ varijablu možete deklarirati bilo kada unutar skripte i pridruživati joj različite tipove podataka
+tijekom izvođenja skripte (iako ovo nije uobičajena niti previše praktična praksa)
+⚫ isto tako, možete mijenjati tip podataka neke varijable jednog te istog sadržaja
+
+⚫ NULL - varijable kojima nije dodijeljena vrijednost imaju vrijednost tipa NULL. NULL je nepostojeća
+vrijednost, prazno polje ili polje bez vrijednosti. Napomena: i nula je vrijednost i zato ne treba
+miješati nulu i NULL.
+
+
+STRING TIP:
+Korištenjem dvostrukih navodnika (")
+možete koristiti 'special characters'.
+To su posebni znakovi koji govore PHP-u
+da izvrši određene radnje pri ispisu
+sadržaja varijable.
+To su znakovi koji slijede iza znaka
+backslash ( \ ).
+On se ujedno koristi za preskakanje
+određenog znaka unutar stringa.
+
+Drugi način odvajanja stringova su
+jednostruki navodnici (').
+Kad je string unutar jednostrukih
+navodnika, jedini escape znakovi koje će
+PHP razumjeti su "\\" i "\'".
+Varijable navedene unutar jednostrukih
+navodnika se neće koristiti kao varijable,
+već kao najobičniji niz znakova.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+REFERENCE
+
+Reference u php-u su način pristupanja istom sadržaju
+varijable pod različitim imenima.
+Oznaka za referencu je znak „&”.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+PHP FUNKCIJE
+
+• U PHP-u, funkcija je blok koda koji se može pozivati iz drugih
+dijelova programa kako bi se izvršile određene radnje.
+• Kada proslijedite argument referencom na funkciju u PHP-u tada
+funkcijom modificiramo izvornu varijablu.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+PHP NIZOVI
+
+• Indeksirani nizovi koriste cijele brojeve kao ključeve, dok asocijativni
+nizovi koriste tekstovne znakove kao ključeve.
+
+Empty i isset su korisne funkcije za ispitivanje
+sadržaja niza.
+Ako želite saznati sadrži li niz elemente ili je
+prazan, to možete učiniti pomoću funkcije empty.
+Funkcija isset vraća true ili false ovisno o tome
+postoji li traženi element u nizu ili ne.
+
+Jedna od najčešće korištenih funkcija u traženju
+elemenata u nizu je in_array.
+Ova funkcija uzima dvije vrijednosti, vrijednost
+koju želite tražiti i niz u kojem tražite.
+Funkcija vraća true ako je vrijednost u nizu, a u
+suprotnom je false.
+Ponekad je korisnija funkcija array_search.
+Ova funkcija djeluje na isti način, osim što,
+umjesto da vrati logičku vrijednost, vraća ključ
+tamo gdje se nalazi vrijednost koju tražimo, ili
+false ako vrijednost nije pronađena.
+
+Niz je prema zadanim postavkama sortiran prema redoslijedu u kojem su dodani elementi, ali niz
+možete sortirati prema njegovom ključu ili prema vrijednosti, uzlazno i silazno.
+Nadalje, kad sortirate niz prema vrijednostima, možete odabrati da sačuvate njihove ključeve ili
+generirate nove.
+
+Možemo dobiti popis ključeva niza funkcijom
+array_keys i popis njegovih vrijednosti funkcijom
+array_values.
+Možemo dobiti broj elemenata u nizu funkcijom
+count.
+I možemo spojiti dva ili više niza u jedan
+funkcijom array_merge.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+KONKATENACIJA
+
+Jedini operator nad stringovima je točka „.”
+Ovaj operator se koristi za pridruživanje
+(konkatenaciju) stringova: spajanje dva i više
+znakovna izraza u jedan.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+PHP Cookies
+
+• Cookies su male tekstualne datoteke koje se pohranjuju na računalu
+korisnika kada korisnik posjeti web stranicu.
+• Za postavljanje cookiesa u PHP-u koristi se funkcija setcookie()
+• Za čitanje vrijednosti cookie-a u PHP-u koristi se globalna varijabla
+$_COOKIE, npr:
+echo $_COOKIE['username’];
+• Za brisanje cookie-a u PHP-u treba postaviti vrijeme isteka na vrijeme koje
+je prošlo npr:
+setcookie(„Korisnicki_broj", "", time()-3600, "/");
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+PHP FUNKCIJE
+
+Funkcija je blok koda za višekratnu upotrebu koja, uz unos, izvodi neke radnje i po želji vraća neki
+rezultat.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+PHP funkcije – kao varijable
+
+PHPOsnove/Primjeri/Funkcije/kao_varijable.php
+
+PHP podržava koncept funkcija kao varijable. To
+znači da će, ako je vrijednost varijable jednaka
+nazivu funkcije, PHP tražiti funkciju s istim
+nazivom i pokušati je izvršiti.
+Između ostalog, ovo se može koristiti za
+implementaciju povratnih poziva.
+Ovaj način pozivanja funkcija neće raditi s
+ugrađenim PHP funkcijama kao što su: echo,
+print, unset, isset, empty, include, require i slične.
+
+<?php 
+//this is a wrapper function around echo
+function echoIt($string){
+    echo $string;
+}
+
+$func = 'echoIt';
+$func('test'); // this calls echoIt()
+?>
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+PHP datoteke
+
+PHP omogućuje pretvaranje nizova u JSON i
+obrnuto pomoću samo nekoliko funkcija:
+json_encode i json_decode.
+
+• fopen(): otvara datoteku u određenom načinu (npr. čitanje,
+pisanje, dodavanje) i vraća pokazivač datoteke.
+• Primjer: $handle = fopen('datoteka.txt', 'r’);
+
+• fwrite(): piše u datoteku s otvorenim pokazivačem datoteke.
+• Primjer: fwrite($handle, 'Ovo je primjer teksta koji se piše u
+datoteku.’);
+
+• fclose(): zatvara datoteku s otvorenim pokazivačem datoteke.
+• Primjer: fclose($handle);
+
+• unlink(): briše datoteku na navedenoj putanji.
+• Primjer: unlink('datoteka.txt’);
+
+• Je li datoteka učitana s forme provjeravamo s
+$_FILES["datoteka"]
+
+• Za premještanje datoteke koristimo funkciju
+move_uploaded_file()
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+JSON DATOTEKE
+
+- ČITANJE
+
+Prethodni isječak koda je JSON prikaz našeg niza
+u PHP-u. Pročitajmo sadržaj datoteke funkcijom
+file_get_contents i transformirajmo ga u PHP niz
+s json_decode.
+Samo s jednom funkcijom u mogućnosti smo
+pohraniti sav sadržaj iz JSON datoteke u varijablu
+kao niz.
+Drugi argument u funkciji json_decode govori
+PHP-u da JSON transformira u niz, jer bi u
+protivnom koristio objekte, koje još nismo
+obuhvatili.
+
+<?php
+//čitanje sadržaja datoteke
+$booksJson = file_get_contents('knjige.json');
+print_r($booksJson);
+//prebacivanje u niz:
+$books = json_decode($booksJson, true);
+print_r($books);
+?>
+
+- ZAPISIVANJE
+
+Pročitajmo sadržaj datoteke s funkcijom
+file_get_contents i transformirajmo ga u PHP niz
+s json_decode.
+Nakon što napravimo niz, dodajmo nove podatke
+u isti te ga transformirajmo u JSON funkcijom
+json_encode.
+Nove JSON podatke zapišimo u datoteku
+funkcijom file_put_contents.
+
+
+<?php
+//čitanje sadržaja datoteke
+$booksJson = file_get_contents(__DIR__. '/knjige.json');
+//transformacija u niz
+$books= json_decode($booksJson, true);
+//dodavanje novih podataka u niz
+$books[] = [
+    "title" => "harry potter",
+    "author" => "j k rolling",
+    "available" => false
+];
+//transformiranje u json
+$booksJson = json_encode($books);
+//zapisivanje novih podataka u datoteku
+file_put_contents(__DIR__. '/knjige.json', $booksJson);
+?>
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+REKURZIJA
+
+Rekurzija u PHP-u podrazumijeva funkciju koja poziva samu sebe unutar vlastitog tijela.
+Koristi se za rješavanje problema koji mogu biti razbijeni na manje, slične probleme.
+Rekurzija je česta kod problema koji uključuju hijerarhijske strukture (npr. stabla), 
+faktore niza, i slične matematičke ili iterativne procese.
+
+
+
