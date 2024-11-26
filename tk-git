@@ -1,1 +1,60 @@
 https://github.com/tkescec-algebra/algebra-blog-api
+
+BOOK
+<?php
+
+class Book {
+    // Svojstva
+    public $title;       // Naslov knjige
+    public $author;      // Autor knjige
+    public $isbn;        // ISBN broj knjige
+    public $available;   // Booleova vrijednost koja označava dostupnost knjige
+
+    // Konstruktor
+    public function __construct($title, $author, $isbn) {
+        $this->title = $title;
+        $this->author = $author;
+        $this->isbn = $isbn;
+        $this->available = true; // Prema zadanim postavkama, knjiga je dostupna
+    }
+
+    // Metoda za posuđivanje knjige
+    public function borrow() {
+        if ($this->available) {
+            $this->available = false; // Postavljamo knjigu kao nedostupnu
+            return true; // Knjiga je uspješno posuđena
+        }
+        return false; // Knjiga nije dostupna
+    }
+
+    // Metoda za vraćanje knjige
+    public function returnBook() {
+        $this->available = true; // Knjiga je sada dostupna
+    }
+
+    // Metoda za dobivanje informacija o knjizi
+    public function getInfo() {
+        return "Naslov: " . $this->title . "\n" .
+               "Autor: " . $this->author . "\n" .
+               "ISBN: " . $this->isbn . "\n" .
+               "Dostupnost: " . ($this->available ? "Dostupna" : "Nedostupna") . "\n";
+    }
+}
+
+// Testiranje klase
+$book1 = new Book("1984", "George Orwell", "978-0451524935");
+
+echo $book1->getInfo();  // Ispisuje informacije o knjizi
+
+// Posuđivanje knjige
+if ($book1->borrow()) {
+    echo "Knjiga je uspješno posuđena.\n";
+} else {
+    echo "Knjiga nije dostupna.\n";
+}
+
+echo $book1->getInfo();  // Ispisuje informacije nakon posudbe
+
+// Vraćanje knjige
+$book1->returnBook();
+echo $book1->getInfo();  // Ispisuje informacije nakon vraćanja
