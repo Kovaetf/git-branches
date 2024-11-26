@@ -34,7 +34,12 @@ Ako su vrijednosti različitih tipova, PHP će ih automatski pokušati pretvorit
 === (Stroga usporedba):
 Uspoređuje i vrijednosti i tip podataka.
 Dvije vrijednosti su jednake samo ako imaju istu vrijednost i isti tip.
+---------------------------------------------------------------------------------------------------------------------
+Objasni razliku između echo i print u PHP-u.
+echo prihvaća više argumenata i nema povratnu vrijednost, a print prihvaća samo jedan argument i uvijek vraća 1
 
+Objasni kako funkcionira funkcija isset(). (2 boda)
+Ako je dostavljeno više parametara tada će isset() vratiti true samo ako se svi parametri smatraju postavljenima. Evaluacija ide slijeva nadesno i zaustavlja se čim se naiđe na nepostavljenu varijablu.
 ---------------------------------------------------------------------------------------------------------------------
 
 PITANJE 
