@@ -24,6 +24,18 @@ Datoteka se uključuje samo jednom, bez obzira na to koliko puta se poziva.
 Ako je datoteka već uključena, naredba se ignorira.
 Ako datoteka ne postoji, kao i kod require, generira se fatalna greška i izvršavanje skripte se prekida.
 Korisno kada želimo osigurati učitavnje datoteka samo jednom, što spriječava višestruko definiranje funkcija, klasa ili konstanti.
+---------------------------------------------------------------------------------------------------------------------
+Operatori == (dvostruko jednako) i === (trostruko jednako) koriste se za usporedbu vrijednosti, ali postoji ključna razlika u njihovom ponašanju:
+
+== (Slaba usporedba):
+Uspoređuje samo vrijednosti, ignorirajući tip podataka.
+Ako su vrijednosti različitih tipova, PHP će ih automatski pokušati pretvoriti u isti tip (type juggling) prije usporedbe.
+
+=== (Stroga usporedba):
+Uspoređuje i vrijednosti i tip podataka.
+Dvije vrijednosti su jednake samo ako imaju istu vrijednost i isti tip.
+
+---------------------------------------------------------------------------------------------------------------------
 
 PITANJE 
 - Što je normalizacija? Normalizacija baze podataka je razdoblje kojim se iz danog modela bez podataka 
