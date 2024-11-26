@@ -1,5 +1,30 @@
 POTENCIJALNA PITANJA:
 
+Razlike između include i include_once:
+include:
+
+Svaki put kada se pozove, datoteka se uvijek uključuje, bez obzira na to da li je već ranije uključena.
+Korisno kada je potrebno više puta uključiti istu datoteku u različite dijelove skripte.
+Ako datoteka ne postoji, include generira upozorenje (warning), ali se skripta nastavlja izvršavati.
+
+include_once:
+
+Datoteka se uključuje samo jednom, bez obzira na to koliko puta se poziva.
+Ako je datoteka već uključena ranije, naredba se ignorira.
+Ovo spriječava višestruko uključivanje iste datoteke, što može biti korisno za izbjegavanje grešaka poput redefiniranja funkcija ili klasa.
+Ako datoteka ne postoji, kao i kod include, generira se upozorenje, ali skripta nastavlja izvršavanje.
+
+require:
+Datoteka se uvijek uključuje, bez obzira na to da li je već ranije uključena.
+Ako datoteka ne postoji ili nije dostupna, prekida se izvršavanje skripte i generira se fatalna greška.
+Korisno kada je uključivanje datoteke kritično za rad aplikacije.
+
+require_once:
+Datoteka se uključuje samo jednom, bez obzira na to koliko puta se poziva.
+Ako je datoteka već uključena, naredba se ignorira.
+Ako datoteka ne postoji, kao i kod require, generira se fatalna greška i izvršavanje skripte se prekida.
+Korisno kada želimo osigurati učitavnje datoteka samo jednom, što spriječava višestruko definiranje funkcija, klasa ili konstanti.
+
 PITANJE 
 - Što je normalizacija? Normalizacija baze podataka je razdoblje kojim se iz danog modela bez podataka 
 nastoji otkloniti potreba za višestrukim ponavljanjem različitih podataka. Načelni cilj normalizacije možemo 
