@@ -185,11 +185,12 @@ NAPIŠI KONEKCIJU SA PDO I SA MYSQLI
 
 OBJASNITE MYSQL MIGRACIJE (TO NISU LARAVEL MIGRACIJE) :
 
+- to je prijenos podatake s jedne baze podataka nad rugu bazu podataka
 - omogućuju da drugi dobiju nove tablice ili stupce u bazi, omogućuju verzioniziranje baze (možemo se vratiti unatrag
 sa rollback)
 - kreiraju se pomoću artisana
 
-----------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
 
 KAKO MIGRIRATI BAZU NA SERVER?
 
