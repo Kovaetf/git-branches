@@ -209,11 +209,18 @@ Pregledajte postojeću bazu podataka kako biste identificirali probleme poput
 redundantnih podataka, nepravilono pohranjenih podataka (npr. više vrijednosti
 u jednom stupcu), ili bilo kakvih znakova koji ušućuju na lošu strukturu baze.
 
-2. Primjena prve normalne forme 1NF
+2. Prve normalne forme (1NF):
 Osigurajte da tabablica sadrži samo atomske vrijednosti, tj. da svaka čelija
 sadrži samo jednu vrijednost.
 
-.........
+3. Druga normalna forma (2NF): Svaka tablica mora imati primarni
+ključ, a svi ostali atributi u tablici moraju biti ovisni o primarnom
+ključu.
+
+4. Treća normalna forma (3NF): Svaki atribut koji nije dio primarnog
+ključa treba biti ovisan samo o primarnom ključu, a ne na drugim
+atributima u tablici
+
 
 ----------------------------------------------------------------------------------------------------------------------
 
